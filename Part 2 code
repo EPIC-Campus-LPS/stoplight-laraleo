@@ -1,0 +1,29 @@
+import RPi.GPIO as GPIO
+import time
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+def stoplight():
+    GPIO.setup(20,GPIO.OUT)
+    #this command sets the pin up for power
+    print ("Go")
+    #this command tells the reader that it is time to go
+    GPIO.output(20,GPIO.HIGH)
+   #this command gives high amounts of power to GPIO pin 20, turning on the LED
+    time.sleep(5)
+   #this command keeps the LED on for 5 seconds
+    GPIO.output(20,GPIO.LOW)
+   #this command turns off the LED by removing power from the pin
+    GPIO.setup(12,GPIO.OUT)
+    print ("Wait")
+    GPIO.output(12,GPIO.HIGH)
+    time.sleep(2)
+    GPIO.output(12,GPIO.LOW)
+    GPIO.setup(19,GPIO.OUT)
+    print ("Stop")
+    GPIO.output(19,GPIO.HIGH)
+    time.sleep(4)
+    GPIO.output(19,GPIO.LOW)
+GPIO.setup(22, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+while True:
+    if GPIO.input(22) == GPIO.LOW:
+        stoplight()
