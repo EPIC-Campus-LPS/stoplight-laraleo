@@ -1,0 +1,20 @@
+What is a Python library and how do you include one in your script?
+  It is prewritten code that  you can copy into your script.
+What does it mean for elements of a circuits to be in series vs. in parallel?
+  seriese is where the energy is directed at one single ciruit or place, but a parallel is when energy is divided equally between circuits.
+Can you create a circuit of 3 light bulbs in series? Why or why not?
+  Yes, I believe you can as long as you have adequate ressitors to make sure that the LED's do not explode.
+The stoplight pattern is Green ON for 5 seconds, Yellow ON for 1 seconds, and Red ON for 4 seconds. Define the function f ( t ) as a piecewise function that outputs 1 if the green light is on, 2 if the yellow light is on, and 3 if the red light is on over 10 seconds. The bounds of the function are 0 <= t <= 10
+        [ 1 , t = 5
+  f(t)= [ 2 , t = 1
+        [ 3 , t = 4, t > 10
+Sketch a graph of f ( t ) over 10 seconds using a step-like shape.
+
+ 3-|           #                 ############# ->
+   |
+ 2-| #
+   |
+ 1-|              #
+   | __ __ __ __ __ __ __ __ __ __ __ __ __ __ __
+         |     |     |     |     |     |     | 
+        2      4     6     8     10    12    14
